@@ -30,7 +30,7 @@ var main = {
             alert('글이 등록되었습니다.');
             window.location.href = '/';
         }).fail(function (error) {
-            alert(JSON.stringify(error));
+            alert('권한이 없습니다.');
         });
     },
     update : function () {
