@@ -1,0 +1,39 @@
+{{>layout/header}}
+
+<div class="container-fluid tm-content-container boardlist-container">
+    <div class="tm-bg-dark content-pad" style="height:90%">
+        <h2 class="mb-4" style="text-align: center;"></h2>
+        <table style="width: 100%;">
+            <colgroup>
+                <col width="3%">
+                <col width="30%">
+                <col width="8%">
+                <col width="8%">
+                <col width="5%">
+            </colgroup>
+            <thead>
+                <th style="text-align: center;">NO</th>
+                <th style="text-align: center;">제목</th>
+                <th style="text-align: center;">작성자</th>
+                <th style="text-align: center;">작성일</th>
+                <th style="text-align: center;">조회수</th>
+            </thead>
+            <tbody>
+                {{#boardList}}
+                <tr>
+                    <td style="text-align: center;">{{id}}</td>
+                    <td style="padding-left: 4%"><a href="/board/detail?id={{id}}">{{title}}</a></td>
+                    <td style="text-align: center;">{{author}}</td>
+                    <td style="text-align: center;">{{createDate}}</td>
+                </tr>
+                {{/boardList}}
+            </tbody>
+        </table>
+        <div style="float:right;">
+            <button type="button" class="btn btn-common" id="btn-regist">등록</button>
+        </div>
+    </div>
+</div>
+
+
+{{>layout/footer}}

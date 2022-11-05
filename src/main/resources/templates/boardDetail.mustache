@@ -1,0 +1,31 @@
+{{>layout/header}}
+<div>
+    <button type="button" class="btn btn-common" id="btn-list" style="float:right;" onclick="history.back()">뒤로 가기</button>
+</div>
+<div class="container-fluid tm-content-container boardlist-container">
+    {{#post}}
+    <div class="tm-bg-dark content-pad" style="height:90%; overflow:scroll;">
+        <h2 class="mb-4" style="text-align: center;"></h2>
+        <table style="width: 100%;">
+                <tr>
+                    <td style="padding-left:4%; width:80%"><b>{{title}}</b></td>
+                    <td style="padding-left:4%">{{post.createDate}}</td>
+                </tr>
+                <tr>
+                    <td style="padding-left:4%">{{post.author}}</td>
+                    <td style="padding-left:4%"><b>조회수 </b>1</td>
+                </tr>
+        </table>
+        <div class="board-detail-content" style="padding:4%;height:70%;">
+            <p>{{post.content}}</p>
+            <!--<div class="board-detail-content-img">
+                <img src="../images/son.png" alt="img" style="max-width:90%">
+            </div>-->
+        </div>
+        <br>
+    </div>
+    {{/post}}
+</div>
+
+
+{{>layout/footer}}

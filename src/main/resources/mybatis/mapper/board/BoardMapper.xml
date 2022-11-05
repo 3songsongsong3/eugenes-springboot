@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jojoldu.book.springboot.dao.board.BoardMapper">
+	<select id="getBoardList" resultType="com.jojoldu.book.springboot.domain.board.BoardVO">
+		SELECT
+			id,
+			title,
+			author,
+			user_id AS userId,
+			content,
+			create_date AS createDate,
+			modified_date AS modifiedDate
+		FROM
+			posts
+	</select>
+	<select id="getBoardDetail" resultType="com.jojoldu.book.springboot.domain.board.BoardVO" parameterType="int">
+		SELECT
+			ID,
+			TITLE,
+			AUTHOR,
+			CREATE_DATE AS createDate,
+			MODIFIED_DATE AS modifiedDate,
+			USER_ID AS userId,
+			CONTENT
+		FROM
+			posts
+		WHERE
+			ID = #{id}
+	</select>
+</mapper>

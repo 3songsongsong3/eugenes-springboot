@@ -52,6 +52,10 @@ h2 {
     max-width: 1860px;
 }
 
+.boardlist-container {
+    height: 80%;
+}
+
 .btn {
     font-size: 1.3rem;
     padding: 13px 23px;
@@ -62,6 +66,12 @@ h2 {
     background-color: white;
     border: none;
     color: #333;
+}
+
+.btn-common {
+    background-color: none;
+    border: none;
+    color: #f8f9fa;
 }
 
 .btn-primary:hover,
