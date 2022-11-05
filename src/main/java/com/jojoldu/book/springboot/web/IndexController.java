@@ -2,21 +2,26 @@ package com.jojoldu.book.springboot.web;
 
 import com.jojoldu.book.springboot.config.auth.LoginUser;
 import com.jojoldu.book.springboot.config.auth.dto.SessionUser;
+import com.jojoldu.book.springboot.domain.user.UserVO;
 import com.jojoldu.book.springboot.service.posts.PostsService;
+import com.jojoldu.book.springboot.service.test.TestService;
 import com.jojoldu.book.springboot.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @RequiredArgsConstructor
 @Controller
 public class IndexController {
 
     private final PostsService postsService;
+    private final TestService testService;
     private final HttpSession httpSession;
 
     @GetMapping("/")
@@ -45,5 +50,12 @@ public class IndexController {
         model.addAttribute("post", dto);
 
         return "posts-update";
+    }
+
+    @ResponseBody
+    @GetMapping("/mybatisTest")
+    public List<UserVO> testMb(Model model) {
+        List<UserVO> userList = testService.getUserList();
+        return userList;
     }
 }

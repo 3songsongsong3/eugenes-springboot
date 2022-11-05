@@ -19,13 +19,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .headers().frameOptions().disable() // h2-console 화면 사용하기 위해 해당 옵션들을 disable
                 .and()
-                .authorizeRequests() // URL별 권한 설정 antMatchers 옵션 사용 가능
+                //.authorizeRequests() // URL별 권한 설정 antMatchers 옵션 사용 가능
                 // 권한 관리 대상 지정
                 // URL, HTTP 메소드별로 관리가 가능
-                .antMatchers("/", "/video/**","/css/**", "/images/**", "/js/**", "/h2-console/**", "/profile").permitAll()
-                .antMatchers("/api/v1/**").hasRole(Role.USER.name())
-                .anyRequest().authenticated() // 설정된 값들 이외의 나머지 URL, authenticated()옵션으로  나머지 URL은 인증이 필요하도록 함
-                .and()
+                //.antMatchers("/", "/video/**","/css/**", "/images/**", "/js/**", "/h2-console/**", "/profile").permitAll()
+                //.antMatchers("/api/v1/**").hasRole(Role.USER.name())
+                //.anyRequest().authenticated() // 설정된 값들 이외의 나머지 URL, authenticated()옵션으로  나머지 URL은 인증이 필요하도록 함
+                //.and()
                 .logout()
                 .logoutSuccessUrl("/") // 로그 아웃 설정시 해당 URL로 이동
                 .and()
