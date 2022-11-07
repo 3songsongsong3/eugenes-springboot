@@ -10,4 +10,7 @@ public interface BoardService {
 	List<BoardVO> getBoardList();
 	
 	BoardVO getBoardDetail(int userId);
+
+	void addViewCount(int id);
+
 }

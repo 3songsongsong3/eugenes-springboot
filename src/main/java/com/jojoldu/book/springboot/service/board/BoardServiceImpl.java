@@ -1,13 +1,11 @@
 package com.jojoldu.book.springboot.service.board;
 
-import java.util.List;
-
-import javax.annotation.Resource;
-
-import org.springframework.stereotype.Service;
-
 import com.jojoldu.book.springboot.dao.board.BoardMapper;
 import com.jojoldu.book.springboot.domain.board.BoardVO;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 @Service("boardService")
 public class BoardServiceImpl implements BoardService{
@@ -25,6 +23,11 @@ public class BoardServiceImpl implements BoardService{
 	public BoardVO getBoardDetail(int userId) {
 		BoardVO getBoardDetail = boardMapper.getBoardDetail(userId);
 		return getBoardDetail;
+	}
+
+	@Override
+	public void addViewCount(int id) {
+		boardMapper.addViewCount(id);
 	}
 
 }

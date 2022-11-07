@@ -27,6 +27,7 @@ public class BoardController {
     @GetMapping("/board/detail")
     public String selectPostDetail(@RequestParam int id, Model model) {
 
+        boardService.addViewCount(id);
         BoardVO post = boardService.getBoardDetail(id);
         model.addAttribute("post",post);
 

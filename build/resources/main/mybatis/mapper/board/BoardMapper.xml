@@ -9,7 +9,8 @@
 			user_id AS userId,
 			content,
 			create_date AS createDate,
-			modified_date AS modifiedDate
+			modified_date AS modifiedDate,
+			view_count AS viewCount
 		FROM
 			posts
 	</select>
@@ -21,10 +22,20 @@
 			CREATE_DATE AS createDate,
 			MODIFIED_DATE AS modifiedDate,
 			USER_ID AS userId,
+			VIEW_COUNT AS viewCount,
 			CONTENT
 		FROM
 			posts
 		WHERE
 			ID = #{id}
 	</select>
+
+	<update id="addViewCount" parameterType="int">
+		update
+			posts
+		set
+			view_count = view_count + 1
+		where
+			id = #{id}
+	</update>
 </mapper>

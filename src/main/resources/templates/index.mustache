@@ -5,34 +5,1204 @@
             <li class="px-3" data-page-no="1">
                 <div class="page-width-1 page-left">
                     <div class="d-flex position-relative tm-border-top tm-border-bottom intro-container">
-                        <div class="intro-left tm-bg-dark">
-                            <h2 class="mb-4">경기 일정 및 결과</h2>
-                            <table>
+                        <div class="intro-left tm-bg-dark" style="width:100%">
+                            <h2 class="mb-4">2022/2023 EPL 순위</h2>
+                            <table summary="팀 순위" cellspacing="0" style="width:95%">
+                                <colgroup>
+                                    <col width="45">
+                                    <col width="*">
+                                    <col width="80">
+                                    <col width="80">
+                                    <col width="80">
+                                    <col width="80">
+                                    <col width="80">
+                                    <col width="80">
+                                    <col width="80">
+                                    <col width="80">
+                                </colgroup>
                                 <thead>
-                                    <tr>
-                                        <td colspan="5" style="text-align:center;">22.09.04</td>
-                                    </tr>
+                                <tr>
+                                    <th scope="col">
+                                        <div class="inner">
+                                            <strong>순위</strong>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="align_l">
+                                        <div class="inner">
+                                            <strong>팀</strong>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="inner">
+                                            <strong>경기수</strong>
+                                        </div>
+                                    </th>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <th scope="col" class="selected">
+                                        <a href="javascript:wfootballTeamRecordSortByColumn('gainPoint');" class="inner">
+                                            <strong class="sort">승점</strong>
+                                        </a>
+                                    </th>
+                                    <th scope="col">
+                                        <a href="javascript:wfootballTeamRecordSortByColumn('won', 'lost', 'manyFew');" class="inner">
+                                            <strong class="sort">승</strong>
+                                        </a>
+                                    </th>
+                                    <th scope="col">
+                                        <a href="javascript:wfootballTeamRecordSortByColumn('drawn', 'lost', 'manyFew');" class="inner">
+                                            <strong class="sort">무</strong>
+                                        </a>
+                                    </th>
+                                    <th scope="col">
+                                        <a href="javascript:wfootballTeamRecordSortByColumn('lost', 'won', 'manyFew');" class="inner">
+                                            <strong class="sort">패</strong>
+                                        </a>
+                                    </th>
+                                    <th scope="col">
+                                        <a href="javascript:wfootballTeamRecordSortByColumn('gainGoal', 'loseGoal', 'manyFew');" class="inner">
+                                            <strong class="sort">득점</strong>
+                                        </a>
+                                    </th>
+                                    <th scope="col">
+                                        <a href="javascript:wfootballTeamRecordSortByColumn('loseGoal', 'gainGoal', 'manyFew');" class="inner">
+                                            <strong class="sort">실점</strong>
+                                        </a>
+                                    </th>
+                                    <th scope="col">
+                                        <a href="javascript:wfootballTeamRecordSortByColumn('goalGap', 'gainGoal', 'manyMany');" class="inner">
+                                            <strong class="sort">득실차</strong>
+                                        </a>
+                                    </th>
+                                </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td> 브라이튼</td>
-                                        <td></td>
-                                        <td>22:00</td>
-                                        <td></td>
-                                        <td>레스터</td>
-                                    </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num best">
+                                        <div class="inner champsLeague">
+                                            <strong>1</strong>
+                                            <span class="state_bar1"><span class="blind">챔피언스 리그 직행</span></span>
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">아스널 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>13</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>34</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>11</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>1</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>1</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>31</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>11</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>20</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner champsLeague">
+                                            <strong>2</strong>
+                                            <span class="state_bar1"><span class="blind">챔피언스 리그 직행</span></span>
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">맨체스터 시티 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>13</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>32</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>10</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>2</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>1</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>39</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>12</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>27</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner champsLeague">
+                                            <strong>3</strong>
+
+                                            <span class="state_bar1"><span class="blind">챔피언스 리그 직행</span></span>
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">뉴캐슬 유나이티드 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>27</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>7</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>6</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>1</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>28</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>11</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>17</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner champsLeague">
+                                            <strong>4</strong>
+
+                                            <span class="state_bar1"><span class="blind">챔피언스 리그 직행</span></span>
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">토트넘 홋스퍼 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>26</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>8</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>2</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>27</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>18</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>9</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner europaLeague">
+                                            <strong>5</strong>
+
+                                            <span class="state_bar3"><span class="blind">유로파 리그</span></span>
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">맨체스터 유나이티드 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>13</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>23</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>7</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>2</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>18</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>19</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>-1</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner europaLeague">
+                                            <strong>6</strong>
+
+                                            <span class="state_bar3"><span class="blind">유로파 리그</span></span>
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">브라이튼 앤 호브 알비온 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>13</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>21</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>6</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>3</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>22</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>17</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>5</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner normal">
+                                            <strong>7</strong>
+
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">첼시 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>13</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>21</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>6</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>3</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>17</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>16</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>1</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner normal">
+                                            <strong>8</strong>
+
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">리버풀 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>13</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>19</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>5</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>25</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>16</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>9</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner normal">
+                                            <strong>9</strong>
+
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">풀럼 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>19</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>5</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>5</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>23</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>24</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>-1</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner normal">
+                                            <strong>10</strong>
+
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">크리스탈 팰리스 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>13</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>19</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>5</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>15</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>17</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>-2</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner normal">
+                                            <strong>11</strong>
+
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">브렌트포드 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>16</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>3</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>7</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>21</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>24</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>-3</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner normal">
+                                            <strong>12</strong>
+
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">리즈 유나이티드 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>13</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>15</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>3</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>6</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>19</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>22</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>-3</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner normal">
+                                            <strong>13</strong>
+
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">아스톤 빌라 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>15</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>3</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>7</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>21</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>-7</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner normal">
+                                            <strong>14</strong>
+
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">레스터 시티 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>2</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>8</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>23</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>25</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>-2</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner normal">
+                                            <strong>15</strong>
+
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">웨스트햄 유나이티드 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>2</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>8</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>12</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>15</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>-3</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner normal">
+                                            <strong>16</strong>
+
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">에버턴 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>3</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>5</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>6</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>11</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>-3</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner normal">
+                                            <strong>17</strong>
+
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">AFC 본머스</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>13</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>3</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>7</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>15</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>32</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>-17</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner relegation">
+                                            <strong>18</strong>
+
+                                            <span class="state_bar4"><span class="blind">강등 직행</span></span>
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">사우샘프턴 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>12</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>3</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>3</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>8</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>12</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>24</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>-12</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner relegation">
+                                            <strong>19</strong>
+
+                                            <span class="state_bar4"><span class="blind">강등 직행</span></span>
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">울버햄튼 원더러스 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>10</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>2</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>8</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>8</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>22</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>-14</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="last">
+                                    <!-- [D] 상위랭크는 best 클래스 추가 -->
+                                    <td class="num ">
+                                        <div class="inner relegation">
+                                            <strong>20</strong>
+
+                                            <span class="state_bar4"><span class="blind">강등 직행</span></span>
+
+                                        </div>
+                                    </td>
+                                    <td class="align_l">
+                                        <div class="inner">
+                                            <span class="name">노팅엄 포레스트 FC</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>14</span>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 선택된 카테고리 활성화 강조 테두리 selected 클래스 추가 -->
+                                    <td class="selected">
+                                        <div class="inner">
+                                            <span>10</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>2</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>8</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>10</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>30</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inner">
+                                            <span>-20</span>
+                                        </div>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="intro-left tm-bg-dark">
-                            <h2 class="mb-4">종합 토론방</h2>
-                            <ol>
-                                <li style="display:block;"> 토트넘의 또다른 'NFS' 떴다…케인 말고 또 '판매 불가' 선언 </li>
-                                <li style="display:block;"> 행복한 나폴리 감독 "수준 높은 김민재 영입한 구단에 감사해" </li>
-                                <li style="display:block;"> "토트넘 최고의 선수"라고 말했지만…1년 뒤 떠날 듯 </li>
-                                <li style="display:block;"> 이적시장 문 닫자마자 텐 하흐 '경고장'부터 받은 '벤치' 호날두 </li>
-                                <li style="display:block;"> [laliga.star] 이 맛에 돈 쓴다…포지션 변경→친정팀에 '2AS' 비수 </li>
-                            </ol>
                         </div>
                         <div class="circle intro-circle-1"></div>
                         <div class="circle intro-circle-2"></div>

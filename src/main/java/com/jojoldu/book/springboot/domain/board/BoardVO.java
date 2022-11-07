@@ -11,6 +11,7 @@ public class BoardVO {
 	public String content;
 	public String title;
 	public String userId;
+	public BigInteger viewCount;
 	public BigInteger getId() {
 		return id;
 	}
@@ -53,7 +54,12 @@ public class BoardVO {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	
+	public BigInteger getViewCount() {
+		return viewCount;
+	}
+	public void setViewCount(BigInteger viewCount) {
+		this.viewCount = viewCount;
+	}
 	
 	
 	
